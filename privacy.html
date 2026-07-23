@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — VoxFrame</title>
+<style>
+  :root{ --bg:#0d0d0d; --text:#eaeaea; --text-dim:#a3a3a3; --accent:#00e5ff; --border:rgba(255,255,255,0.1); }
+  @media (prefers-color-scheme: light){ :root{ --bg:#f7f7f8; --text:#161616; --text-dim:#555; --accent:#0090a8; --border:rgba(0,0,0,0.1); } }
+  :root[data-theme="dark"]{ --bg:#0d0d0d; --text:#eaeaea; --text-dim:#a3a3a3; --accent:#00e5ff; --border:rgba(255,255,255,0.1); }
+  :root[data-theme="light"]{ --bg:#f7f7f8; --text:#161616; --text-dim:#555; --accent:#0090a8; --border:rgba(0,0,0,0.1); }
+  body{ margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif; line-height:1.65; }
+  .wrap{ max-width:760px; margin:0 auto; padding:48px 24px 80px; }
+  a{ color:var(--accent); }
+  h1{ font-size:30px; margin-bottom:4px; }
+  .updated{ color:var(--text-dim); font-size:14px; margin-bottom:40px; }
+  h2{ font-size:19px; margin-top:40px; border-top:1px solid var(--border); padding-top:24px; }
+  p, li{ color:var(--text-dim); font-size:15px; }
+  ul{ padding-left:20px; }
+  .back{ display:inline-block; margin-bottom:24px; color:var(--text-dim); text-decoration:none; font-size:14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="index.html">&larr; VoxFrame</a>
+  <h1>Privacy Policy</h1>
+  <div class="updated">Last updated: <span id="d"></span></div>
+
+  <p>VoxFrame ("we", "our", "the app") is a video-editing app that turns a spoken recording into a trimmed, captioned, ready-to-post clip. This policy explains what data the app handles and why.</p>
+
+  <h2>Information the app processes</h2>
+  <p>To do its job, VoxFrame processes the video and audio you choose to edit:</p>
+  <ul>
+    <li><strong>Video/audio content</strong> — the clip you record or select is trimmed, transcribed, and (optionally) has image overlays and captions added.</li>
+    <li><strong>Account data for platforms you connect</strong> — if you link YouTube, Instagram, or TikTok to publish a video, we handle the OAuth access/refresh tokens and basic account info (e.g. channel name) needed to post on your behalf.</li>
+  </ul>
+
+  <h2>How your content is processed</h2>
+  <p>Parts of the editing pipeline are handled by third-party AI services, which receive only what's needed to perform that step:</p>
+  <ul>
+    <li><strong>Groq (Whisper)</strong> — receives extracted audio to generate a speech transcript and word-level timing, used for auto-captions and trimming.</li>
+    <li><strong>Google Gemini</strong> — receives the transcript (and, when image overlays are enabled, video frames) to identify words worth illustrating.</li>
+    <li><strong>Pexels</strong> — receives search keywords (not your video) to find matching stock photos for overlays.</li>
+  </ul>
+  <p>These services process this data under their own privacy policies. We don't operate our own servers to store or process your video — all editing currently happens on your device or via direct calls to the services above.</p>
+
+  <h2>Publishing to YouTube, Instagram, or TikTok</h2>
+  <p>If you choose to connect an account, VoxFrame uses that platform's official API to upload the video you export, using the title, description, and hashtags you provide. We only request the access needed to publish on your behalf — we do not read, modify, or delete your existing content on that platform.</p>
+  <p><strong>Google API Services User Data Policy:</strong> VoxFrame's use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>Where data is stored</h2>
+  <p>OAuth tokens and app preferences are stored locally on your device. Uninstalling the app removes this data. You can also revoke VoxFrame's access at any time from your Google, Meta, or TikTok account security settings.</p>
+
+  <h2>Data we don't do</h2>
+  <ul>
+    <li>We don't sell your data.</li>
+    <li>We don't use your video content to train our own models.</li>
+    <li>We don't share your data with advertisers.</li>
+  </ul>
+
+  <h2>Children's privacy</h2>
+  <p>VoxFrame is not directed at children under 13, and we do not knowingly collect data from them.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>As VoxFrame adds features (such as user accounts or a premium tier), this policy will be updated to reflect them, with the "last updated" date above changed accordingly.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy? Reach us at <a href="mailto:support@voxframe.org">support@voxframe.org</a>.</p>
+</div>
+<script>document.getElementById('d').textContent = new Date().toISOString().slice(0,10);</script>
+</body>
+</html>
