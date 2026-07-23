@@ -2,6 +2,9 @@
   "name": "voxframe-website",
   "compatibility_date": "2026-07-23",
   "assets": {
-    "directory": "./"
+    "directory": "./",
+    // Serves privacy.html at /privacy, terms.html at /terms, etc. — no .html
+    // in the address bar.
+    "html_handling": "auto-trailing-slash"
   }
 }
