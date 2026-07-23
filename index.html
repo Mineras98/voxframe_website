@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VoxFrame — Speak it. VoxFrame handles the rest.</title>
-<meta name="description" content="VoxFrame turns a raw talking-head video into a trimmed, captioned, ready-to-post clip — automatically, from what you say.">
+<title>VoxFrame — automatic video editing for creators</title>
+<meta name="description" content="VoxFrame is a video editing app that trims your video to your speech, generates captions automatically, and publishes the finished clip straight to YouTube.">
 <link rel="icon" href="/icon.png">
 <link rel="stylesheet" href="/style.css">
 <style>
@@ -22,9 +22,13 @@
   }
   .hero h1{
     font-size:clamp(32px,6vw,54px); font-weight:800; letter-spacing:-0.02em;
-    margin:0 0 16px; line-height:1.12;
+    margin:0 0 8px; line-height:1.12;
   }
-  .hero p{ font-size:19px; color:var(--text-dim); max-width:560px; margin:0 auto 32px; }
+  .hero .tagline{
+    font-size:19px; font-weight:600; color:var(--gold-bright);
+    margin:0 0 18px;
+  }
+  .hero p{ font-size:16px; color:var(--text-dim); max-width:560px; margin:0 auto 24px; }
   .sub-cta{ margin-top:16px; font-size:13px; color:var(--text-dim); }
   .features{
     display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
@@ -54,8 +58,9 @@
 
   <section class="hero">
     <img class="mark" src="/icon.png" alt="VoxFrame">
-    <h1>Speak it.<br><span class="gold-text">VoxFrame</span> handles the rest.</h1>
-    <p>Record a raw take. VoxFrame trims it to what you said, generates captions from your speech, and gets it ready to post — no manual editing.</p>
+    <h1>VoxFrame</h1>
+    <p class="tagline">Speak it. VoxFrame handles the rest.</p>
+    <p>VoxFrame is a video editing app for content creators. It automatically trims a raw talking-head recording down to where you actually start and stop speaking, generates on-screen captions from your speech, and publishes the finished clip straight to YouTube.</p>
     <a class="cta" href="/support">Get in touch</a>
     <div class="sub-cta">Coming soon to Android</div>
   </section>
@@ -74,7 +79,7 @@
     <div class="feature card">
       <div class="icon">📤</div>
       <h3>Ready to post</h3>
-      <p>Export straight to YouTube, Instagram, or TikTok, hashtags and all, without leaving the app.</p>
+      <p>Export and publish straight to YouTube, title and description included, without leaving the app.</p>
     </div>
   </section>
 
