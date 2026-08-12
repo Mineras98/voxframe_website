@@ -38,6 +38,14 @@
   <h2>Where data is stored</h2>
   <p>OAuth tokens and app preferences are stored locally on your device. Uninstalling the app removes this data. You can also revoke VoxFrame's access at any time from your Google, Meta, or TikTok account security settings.</p>
 
+  <h2>How we protect your data</h2>
+  <ul>
+    <li><strong>In transit:</strong> every call to Google, Meta, TikTok, Groq, Gemini, and Pexels is made over HTTPS/TLS. We never transmit tokens or video data over an unencrypted connection.</li>
+    <li><strong>At rest:</strong> OAuth access/refresh tokens are stored in local, app-private storage that the Android operating system sandboxes from every other app on the device — no other app, and no VoxFrame server (we don't run one), can read them.</li>
+    <li><strong>Access control:</strong> tokens are only ever read by the app to make an authenticated request on your behalf, immediately before an upload. They are never logged, and are removed the moment you disconnect an account or uninstall the app.</li>
+    <li><strong>Minimal scope:</strong> we request only the OAuth permissions each platform requires to publish a video on your behalf (e.g. YouTube's <code>youtube.upload</code> scope) — never broader read/manage/delete access to your account.</li>
+  </ul>
+
   <h2>Data we don't do</h2>
   <ul>
     <li>We don't sell your data.</li>
